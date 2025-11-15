@@ -5,78 +5,131 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>International Education Conference 2026</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+
 </head>
 
 <body class="min-h-screen bg-gray-50 text-gray-800 font-sans">
 
   <!-- Header -->
-  <header class="bg-white shadow">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center text-white font-bold">IE</div>
-        <div>
-          <h1 class="text-lg font-semibold">International Conference on Cognitive Informatics Engineering and Technology 2026</h1>
-          <!-- <p class="text-sm text-gray-500">Uniting educators, policymakers & technologists</p> -->
+ <header class="bg-white shadow">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+    <!-- LEFT: Logo + Title -->
+    <div class="flex items-center gap-3 -ml-4">
+      <img src="Images/globe.avif" alt="Logo" class="w-10 h-10 rounded-full object-cover">
+      <h1 class="text-3xl font-semibold whitespace-nowrap">ICCET 2026</h1>
+    </div>
+
+    <!-- RIGHT: NAVIGATION -->
+    <nav class="hidden md:flex gap-6 items-center text-sm relative">
+
+      <!-- About -->
+      <div class="relative">
+        <button id="aboutBtn" class="hover:text-indigo-600 flex items-center gap-1 whitespace-nowrap">
+          About
+          <svg id="arrowIcon" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div id="aboutMenu" class="absolute left-0 mt-2 w-56 bg-white border border-gray-200 rounded-lg shadow-xl hidden z-50">
+          <a href="#college" class="block px-4 py-2 hover:bg-indigo-50">College</a>
+          <a href="#about" class="block px-4 py-2 hover:bg-indigo-50">Conference</a>
         </div>
       </div>
-<nav class="hidden md:flex gap-10 items-center text-sm relative">
-  <a href="#about" class="hover:text-indigo-600">About</a>
-  <a href="#speakers" class="hover:text-indigo-600">Speakers</a>
-  <a href="#schedule" class="hover:text-indigo-600">Schedule</a>
-  <a href="#sponsors" class="hover:text-indigo-600">Sponsors</a>
 
-  <!-- Dropdown: For Authors -->
- <div class="relative">
-<button id="authorsBtn" class="hover:text-indigo-600 flex items-center gap-1 focus:outline-none whitespace-nowrap">
-      For Authors
-      <svg id="arrowIcon" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-      </svg>
-    </button>
+      <a href="#committee" class="hover:text-indigo-600 whitespace-nowrap">Program Committee</a>
+      <a href="#speakers" class="hover:text-indigo-600 whitespace-nowrap">Speakers</a>
 
-    <!-- Dropdown Menu -->
-    <div id="authorsMenu"
-      class="absolute left-0 mt-2 w-56 bg-white border border-gray-200 rounded-lg shadow-xl hidden z-50 max-h-60 overflow-y-auto">
-      <a href="#call-for-papers" class="block px-4 py-2 hover:bg-indigo-50 hover:text-indigo-600">Call for Papers</a>
-      <a href="#paper-submission" class="block px-4 py-2 hover:bg-indigo-50 hover:text-indigo-600">Paper Submission</a>
-      <!-- <a href="#registration" class="block px-4 py-2 hover:bg-indigo-50 hover:text-indigo-600">Registration</a> -->
-      <a href="#journal-publication" class="block px-4 py-2 hover:bg-indigo-50 hover:text-indigo-600">Journal Publication</a>
-    </div>
+      <!-- Call for Papers -->
+      <a href="#call-for-papers" class="hover:text-indigo-600 whitespace-nowrap">Call for Papers</a>
+
+      <!-- Paper Submission -->
+      <div class="relative">
+        <button id="paperBtn" class="hover:text-indigo-600 flex items-center gap-1 whitespace-nowrap">
+          Paper Submission
+          <svg id="arrowIcon2" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div id="paperMenu" class="absolute left-0 mt-2 w-56 bg-white border border-gray-200 rounded-lg shadow-xl hidden z-50">
+          <a href="#paper-submission" class="block px-4 py-2 hover:bg-indigo-50">Registration</a>
+        </div>
+      </div>
+
+      <a href="#" class="hover:text-indigo-600 whitespace-nowrap">Accepted Paper List</a>
+
+      <!-- NEW: Journal Publication -->
+      <a href="#journal-publication" class="hover:text-indigo-600 whitespace-nowrap">Journal Publication</a>
+
+      <a href="#info" class="hover:text-indigo-600 whitespace-nowrap">FAQ</a>
+      <a href="#info" class="hover:text-indigo-600 whitespace-nowrap">Contact Us</a>
+
+    </nav>
+
   </div>
+</header>
 
- <a href="#faq" class="hover:text-indigo-600">FAQ</a>
-  
-
-  <!-- <a href="#register" class="ml-2 px-4 py-2 bg-indigo-600 text-white rounded-lg shadow hover:opacity-95">
-    Register
-  </a> -->
-</nav>
-
-    </div>
-  </header>
 
   <!-- Hero Section -->
   <section class="relative bg-gradient-to-tr from-blue-700 to-indigo-800 text-white">
     <div class="max-w-7xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center gap-10">
       <div class="md:w-1/2">
-        <h2 class="text-4xl md:text-5xl font-extrabold leading-tight">Transforming Education — Global Perspectives</h2>
-        <p class="mt-4 text-lg text-white/90">Join thought leaders, researchers and innovators for a two-day conference exploring the future of global education.</p>
+        <h2 class="text-4xl md:text-4.5xl font-extrabold leading-tight">International Conference on Cognitive Informatics Engineering and Technology</h2>
+        <!-- <p class="mt-4 text-lg text-white/90">Join thought leaders, researchers and innovators for a two-day conference exploring the future of global education.</p> -->
         <div class="mt-6 flex gap-4">
-          <a href="#register" class="px-6 py-3 bg-yellow-400 rounded-lg font-semibold text-indigo-900 shadow">Register Now</a>
-          <a href="#speakers" class="px-6 py-3 border border-white/30 rounded-lg">View Speakers</a>
+          <!-- <a href="openModal" class="px-6 py-3 bg-yellow-400  rounded-lg font-semibold text-indigo-900 shadow">Register Now</a> -->
+          
+          <!-- <a href="#speakers" class="px-6 py-3 border border-white/30 rounded-lg">View Speakers</a> -->
         </div>
         <div class="mt-6 text-sm text-white/80">
-          <div><strong>Date:</strong> <pre>OFFLINE- March 28th, 2026 (Saturday)
-ONLINE - March 29th, 2026(Sunday)
-          </pre></div>
+          <div><strong>Date:</strong> March 28th & 29th, 2026 (Saturday & Sunday)
+
+        </div>
           
-          <div class="mt-1"><strong>Location:</strong> Vidya Vikas College of Engineering and Technology,Tiruchengode</div>
+          <div class="mt-1 "><strong>Location:</strong> Vidya Vikas College of Engineering and Technology,Tiruchengode</div>
         </div>
       </div>
       <div class="md:w-1/2">
-        <div class="w-full bg-white/5 rounded-xl p-4 shadow-inner">
-          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&q=80" alt="conference" class="rounded-lg shadow-md w-full object-cover h-64 md:h-80" />
-        </div>
+        <!--carousel starts-->
+        <div class="relative w-full overflow-hidden rounded-xl shadow-inner">
+  <!-- Slider Wrapper -->
+<div class="relative w-full overflow-hidden rounded-xl shadow-inner">
+  <!-- Slider Wrapper -->
+  <div id="carousel" class="flex transition-transform duration-700 ease-in-out">
+
+    <!-- Slide 1 -->
+    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&q=80"
+         class="w-full object-cover h-64 md:h-80 flex-shrink-0" />
+
+    <!-- Slide 2 -->
+    <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=1200&q=80"
+         class="w-full object-cover h-64 md:h-80 flex-shrink-0" />
+
+    <!-- Slide 3 -->
+    <img src="https://images.unsplash.com/photo-1503428593586-e225b39bddfe?w=1200&q=80"
+         class="w-full object-cover h-64 md:h-80 flex-shrink-0" />
+
+    <!-- Slide 4 -->
+    <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=1200&q=80"
+         class="w-full object-cover h-64 md:h-80 flex-shrink-0" />
+
+  </div>
+
+  <!-- Left Button -->
+  <button id="prevBtn"
+    class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/60 hover:bg-white text-black px-3 py-2 rounded-full shadow">
+    ❮
+  </button>
+
+  <!-- Right Button -->
+  <button id="nextBtn"
+    class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/60 hover:bg-white text-black px-3 py-2 rounded-full shadow">
+    ❯
+  </button>
+</div>
+
+<!--carousel ends-->
       </div>
     </div>
   </section>
@@ -85,30 +138,43 @@ ONLINE - March 29th, 2026(Sunday)
   <main class="max-w-7xl mx-auto px-6 py-12">
 
     <!-- About Section -->
-    <section id="about" class="grid md:grid-cols-2 gap-8 items-center">
-      <div>
-        <h3 class="text-2xl font-bold">About the Conference</h3>
-        <p class="mt-4 text-gray-600">The International Education Conference brings together educators, policymakers, innovators, and students to discuss strategies and innovations for inclusive, high-quality education worldwide.</p>
-        <ul class="mt-4 space-y-2 text-gray-600">
-          <li>• Keynotes by world-class education leaders</li>
-          <li>• Hands-on workshops and demo booths</li>
-          <li>• Networking sessions and grants showcase</li>
-        </ul>
-        <div class="mt-6 flex gap-3">
-          <a href="#schedule" class="px-4 py-2 bg-indigo-600 text-white rounded-md">See Schedule</a>
-          <!-- <a href="#register" class="px-4 py-2 bg-indigo-600 text-white rounded-md">Get Tickets</a> -->
-        </div>
-      </div>
-<div class="bg-gradient-to-br from-white to-gray-100 rounded-xl p-6 shadow transition transform hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-200 hover:border-2 hover:border-blue-500">
-  <h4 class="font-semibold text-gray-800">Who should attend?</h4>
-  <div class="mt-3 space-y-2 text-gray-700">
-    <p>• University leaders & deans</p>
-    <p>• K–12 policymakers</p>
-    <p>• EdTech startups & investors</p>
-    <p>• Researchers & graduate students</p>
+<section id="college" class="bg-white py-12 px-6 md:px-20">
+  <div class="max-w-6xl mx-auto space-y-4">
+    <h3 class="text-2xl font-bold text-gray-900">About Vidya Vikas</h3>
+    <p class="text-gray-600">
+      <span class="text-blue-700 font-semibold">VIDYAA VIKAS COLLEGE OF ENGINEERING AND TECHNOLOGY</span> is established in the year 1973. The college is located at Tiruchengode,Namakkal District,India.
+    </p>
+    <p class="text-gray-600">
+      We aim to increase the application orientation of students and encourage independent study and working. These efforts help students understand concepts deeply and develop essential skills. Our mission is to support academic growth and meet the industrial demand for qualified, skillful engineers and technicians.
+    </p>
+    <a href="https://vvcet.ac.in/" class="text-blue-600 hover:text-blue-800 font-medium underline">Read more...</a>
   </div>
-</div>
-    </section>
+</section>
+
+<section id="about" class="bg-white py-12 px-6 md:px-20 mt-16">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-start">
+    <div class="space-y-4">
+      <h3 class="text-2xl font-bold text-gray-900">About the Conference</h3>
+      <p class="text-gray-600">The International Conference on Cognitive Informatics Engineering and Technology brings together educators, policymakers, innovators, and students to discuss strategies and innovations for inclusive, high-quality education worldwide.</p>
+      <ul class="space-y-2 text-gray-600">
+        <li>• Keynotes by world-class education leaders</li>
+        <li>• Hands-on workshops and demo booths</li>
+        <li>• Networking sessions and grants showcase</li>
+      </ul>
+      <div class="mt-6 flex gap-3">
+        <a href="#schedule" class="px-4 py-2 bg-indigo-600 text-white rounded-md">See Schedule</a>
+      </div>
+    </div>
+    <div class="bg-gradient-to-br mt-10 from-white to-gray-100 rounded-xl p-6 shadow transition transform hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-200 hover:border-2 hover:border-blue-500 space-y-2">
+      <h4 class="font-semibold text-gray-800">Who should attend?</h4>
+      <p class="text-gray-700">• University leaders & deans</p>
+      <p class="text-gray-700">• K–12 policymakers</p>
+      <p class="text-gray-700">• EdTech startups & investors</p>
+      <p class="text-gray-700">• Researchers & graduate students</p>
+    </div>
+  </div>
+</section>
+
 
     <!-- Speakers Section -->
     <section id="speakers" class="mt-14">
@@ -199,11 +265,11 @@ ONLINE - March 29th, 2026(Sunday)
     </section>
 
     <!-- Sponsors Section -->
-<section id="sponsors" class="py-16 bg-gray-50">
+<section id="committee" class="py-16 bg-gray-50">
   <div class="max-w-6xl mx-auto px-6 text-center">
     <!-- Section Title -->
-    <h2 class="text-3xl md:text-4xl font-bold text-indigo-700 mb-4">Our Sponsors</h2>
-    <p class="text-gray-600 mb-12">We are proudly supported by our amazing sponsors who make this event possible.</p>
+    <h2 class="text-3xl md:text-4xl font-bold text-indigo-700 mb-4">Program Committee</h2>
+    <p class="text-gray-600 mb-12">We are proudly supported by our amazing members who make this event possible.</p>
 
     <!-- Sponsor Grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-center justify-items-center">
@@ -253,75 +319,106 @@ ONLINE - March 29th, 2026(Sunday)
     </section> -->
 
     <!--Call for papers Section-->
+
 <section id="call-for-papers" class="py-16 bg-gray-50">
   <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-center text-indigo-700 mb-6">Call for Papers</h2>
-    <p class="text-center text-gray-700 max-w-3xl mx-auto mb-10">
-      We invite original research papers and innovative ideas on the following topics (but not limited to)
-      for presentation at the <strong>International Conference on Cognitive Informatics Engineering and Technology 2026</strong>.
+    <h2 class="text-3xl font-bold text-center text-indigo-700 mb-10">Call for Papers</h2>
+    
+    <!-- Bordered content box -->
+    <div class="bg-white p-6 rounded-xl shadow mb-8">
+      <p class="text-gray-700 mb-8 text-center text-lg">
+      Topics of interest for submission include, but are not limited to:
     </p>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="bg-white p-6 rounded-xl shadow hover:-translate-y-1 hover:shadow-lg transition">
-        <h4 class="font-semibold text-indigo-600 mb-2">Artificial Intelligence & Machine Learning</h4>
-        <ul class="list-disc list-inside text-gray-700 space-y-1">
-          <li>Deep Learning & Neural Networks</li>
-          <li>Reinforcement Learning</li>
-          <li>Explainable AI</li>
-        </ul>
-      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Engineering & Technology -->
+        <div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-4">Engineering & Technology</h3>
+          <ul class="space-y-2 text-gray-600 list-disc list-inside">
+            <!-- list items -->
+             <ul class="space-y-2 text-gray-600 list-disc list-inside">
+            <li>Computer Engineering</li>
+            <li>Electrical & Electronics Engineering</li>
+            <li>Electronics & Communication Engineering</li>
+            <li>Architectural Engineering</li>
+            <li>Agricultural Engineering</li>
+            <li>Acoustic Engineering</li>
+            <li>Automotive Engineering</li>
+            <li>Biomechanics</li>
+            <li>Biomedical Engineering</li>
+            <li>Biotechnology</li>
+            <li>Chemical Engineering</li>
+            <li>Civil Engineering</li>
+            <li>Control Engineering</li>
+            <li>Environmental Engineering</li>
+            <li>Industrial Engineering</li>
+            <li>Instrumentation</li>
+            <li>Mechanical Engineering</li>
+            <li>Materials Engineering</li>
+            <li>Nuclear Engineering</li>
+            <li>Nano Engineering</li>
+            <li>Petroleum Engineering</li>
+            <li>Space Engineering</li>
+            <li>Sports Engineering</li>
+            <li>Wind Engineering</li>
+          </ul>
+        </div>
 
-      <div class="bg-white p-6 rounded-xl shadow hover:-translate-y-1 hover:shadow-lg transition">
-        <h4 class="font-semibold text-indigo-600 mb-2">Data Science & Analytics</h4>
-        <ul class="list-disc list-inside text-gray-700 space-y-1">
-          <li>Big Data Applications</li>
-          <li>Data Mining Techniques</li>
-          <li>Predictive Modeling</li>
-        </ul>
-      </div>
+          
 
-      <div class="bg-white p-6 rounded-xl shadow hover:-translate-y-1 hover:shadow-lg transition">
-        <h4 class="font-semibold text-indigo-600 mb-2">Cybersecurity & Privacy</h4>
-        <ul class="list-disc list-inside text-gray-700 space-y-1">
-          <li>Network Security</li>
-          <li>Cryptography</li>
-          <li>Data Protection in Cloud</li>
-        </ul>
-      </div>
+        <!-- Management -->
+        <div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-4">Management</h3>
+          <ul class="space-y-2 text-gray-600 list-disc list-inside">
+            <!-- list items -->
+               <ul class="space-y-2 text-gray-600 list-disc list-inside">
+            <li>Business Risk</li>
+            <li>Marketing</li>
+            <li>Human Resource</li>
+            <li>International Operational Research</li>
+            <li>International Business</li>
+            <li>Trends in Medicine & Radiology</li>
+          </ul>
+        </div>
 
-      <div class="bg-white p-6 rounded-xl shadow hover:-translate-y-1 hover:shadow-lg transition">
-        <h4 class="font-semibold text-indigo-600 mb-2">Internet of Things (IoT)</h4>
-        <ul class="list-disc list-inside text-gray-700 space-y-1">
-          <li>Smart Cities</li>
-          <li>Industrial IoT</li>
-          <li>IoT Security</li>
-        </ul>
-      </div>
-
-      <div class="bg-white p-6 rounded-xl shadow hover:-translate-y-1 hover:shadow-lg transition">
-        <h4 class="font-semibold text-indigo-600 mb-2">Cloud & Edge Computing</h4>
-        <ul class="list-disc list-inside text-gray-700 space-y-1">
-          <li>Cloud Infrastructure</li>
-          <li>Edge Intelligence</li>
-          <li>Serverless Computing</li>
-        </ul>
-      </div>
-
-      <div class="bg-white p-6 rounded-xl shadow hover:-translate-y-1 hover:shadow-lg transition">
-        <h4 class="font-semibold text-indigo-600 mb-2">Human-Computer Interaction</h4>
-        <ul class="list-disc list-inside text-gray-700 space-y-1">
-          <li>Usability & Accessibility</li>
-          <li>Natural Language Processing</li>
-          <li>AR/VR Interfaces</li>
-        </ul>
+        <!-- Medical and Science -->
+        <div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-4">Medical and Science</h3>
+          <ul class="space-y-2 text-gray-600 list-disc list-inside">
+            <!-- list items -->
+                     <li>Oral Medicine and Radiology</li>
+            <li>Oral Pathology</li>
+            <li>Oral and Maxillofacial Surgery</li>
+            <li>Prosthodontics</li>
+            <li>Endodontics</li>
+            <li>Pedodontics</li>
+            <li>Periodontics</li>
+            <li>Community Dentistry</li>
+            <li>Biochemistry</li>
+            <li>Biochemical Science</li>
+            <li>Biochemical Engineering</li>
+            <li>Environmental Science</li>
+            <li>Measurement Science</li>
+            <li>Nutrition</li>
+            <li>Soil Science</li>
+            <li>Horticulture</li>
+          </ul>
+        </div>
       </div>
     </div>
 
-      <p class="text-center text-gray-800 mt-12 text-lg">
+    <p class="text-center text-gray-800 text-lg">
       📧 Submit your papers to <a href="mailto:mail@gmail.com" class="text-indigo-600 font-semibold hover:underline">mail@gmail.com</a>
     </p>
   </div>
 </section>
+
+
+
+
+
+     
+
 
 <!-- Paper Submission and Registration Section -->
  <section id="paper-submission" class="py-16 bg-gray-50">
@@ -372,41 +469,41 @@ ONLINE - March 29th, 2026(Sunday)
       <table class="w-full border border-gray-300 text-gray-800 text-sm">
         <thead class="bg-indigo-100">
           <tr>
-            <th class="border border-gray-300 px-4 py-2 text-left">Category</th>
-            <th class="border border-gray-300 px-4 py-2 text-left">National Participants</th>
-            <th class="border border-gray-300 px-4 py-2 text-left">International Participants</th>
+            <th class="border border-gray-300 px-4 py-2 text-center">Mode Of Participation</th>
+            <th class="border border-gray-300 px-4 py-2 text-center">Quantity</th>
+            <th class="border border-gray-300 px-4 py-2 text-center">Price per Head (Rs)</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td class="border px-4 py-2">UG, PG Student / Research Scholar / Faculty / Industry Participant (Virtual - 1 Member)</td>
-            <td class="border px-4 py-2 font-medium">Rs. 1800</td>
-            <td class="border px-4 py-2 font-medium">USD 60</td>
+            <td class="border text-center px-4 py-2">Online</td>
+            <td class="border px-4 py-2 text-center font-medium">1</td>
+            <td class="border px-4 py-2 text-center font-medium">1800</td>
           </tr>
           <tr class="bg-gray-50">
-            <td class="border px-4 py-2">UG, PG Student / Research Scholar / Faculty / Industry Participant (Virtual Batch - 5 to 7 Members)</td>
-            <td class="border px-4 py-2 font-medium">Rs. 2200</td>
-            <td class="border px-4 py-2 font-medium">USD 65</td>
+            <td class="border px-4 py-2 text-center">Online</td>
+            <td class="border px-4 py-2 text-center font-medium">2-5</td>
+            <td class="border px-4 py-2 text-center font-medium">2200</td>
           </tr>
           <tr>
-            <td class="border px-4 py-2">UG, PG Student / Research Scholar / Faculty / Industry Participant (Virtual Batch - 5 to 7 Members)</td>
-            <td class="border px-4 py-2 font-medium">Rs. 2550</td>
-            <td class="border px-4 py-2 font-medium">USD 70</td>
+            <td class="border px-4 py-2 text-center">Online</td>
+            <td class="border px-4 py-2 text-center font-medium">6-8</td>
+            <td class="border px-4 py-2 text-center font-medium">2550</td>
           </tr>
           <tr class="bg-gray-50">
-            <td class="border px-4 py-2">UG, PG Student / Research Scholar / Faculty / Industry Participant (On-site Presentation)</td>
-            <td class="border px-4 py-2 font-medium">Rs. 2200</td>
-            <td class="border px-4 py-2 font-medium">USD 70</td>
+            <td class="border px-4 py-2 text-center">Offline</td>
+            <td class="border px-4 py-2 text-center font-medium">1</td>
+            <td class="border px-4 py-2 text-center font-medium">2200</td>
           </tr>
           <tr>
-            <td class="border px-4 py-2">UG, PG Student / Research Scholar / Faculty / Industry Participant (On-site Batch - 2 to 5 Members)</td>
-            <td class="border px-4 py-2 font-medium">Rs. 2950</td>
-            <td class="border px-4 py-2 font-medium">USD 75</td>
+            <td class="border px-4 py-2 text-center">Offline</td>
+            <td class="border px-4 py-2 text-center font-medium">2-5</td>
+            <td class="border px-4 py-2 text-center font-medium">2950</td>
           </tr>
           <tr class="bg-gray-50">
-            <td class="border px-4 py-2">Visitors</td>
-            <td class="border px-4 py-2 font-medium">Rs. 1000</td>
-            <td class="border px-4 py-2 font-medium">USD 50</td>
+            <td class="border px-4 py-2 text-center">Offline</td>
+            <td class="border px-4 py-2 text-center font-medium">Rs. 1000</td>
+            <td class="border px-4 py-2 text-center font-medium">3350</td>
           </tr>
         </tbody>
       </table>
@@ -504,19 +601,20 @@ ONLINE - March 29th, 2026(Sunday)
 
 
     <!-- Call to Action -->
-    <section id="register" class="mt-14 bg-indigo-600 text-white rounded-xl p-6 flex flex-col md:flex-row items-center justify-between">
-      <div>
-        <h4 class="text-xl font-bold">Ready to join delegates from 50+ countries?</h4>
-        <p class="mt-2 text-white/90">Reserve your seat</p>
-      </div>
-    <button id="openModal" class="px-6 py-3 bg-yellow-400 text-indigo-900 rounded-lg font-semibold">
-  Register
-</button>
+<section id="register" class="mt-14 bg-indigo-600 text-white rounded-xl p-6 flex flex-col md:flex-row items-center justify-between">
+  <div>
+    <h4 class="text-xl font-bold">Ready to join delegates from 50+ countries?</h4>
+    <p class="mt-2 text-white/90">Reserve your seat</p>
+  </div>
+
+  <button id="openModal" class="px-6 py-3 bg-yellow-400 text-indigo-900 rounded-lg font-semibold">
+    Register
+  </button>
+</section>
 <!-- Modal (hidden by default) -->
 <div id="registrationModal" class="fixed inset-0 bg-black bg-opacity-40 hidden flex items-center justify-center z-50">
   <div class="bg-white rounded-2xl shadow-2xl w-full max-w-lg p-8 relative">
-
-    <!-- Close Button -->
+    
     <button id="closeModal" class="absolute top-3 right-3 text-gray-500 hover:text-gray-800 text-2xl">&times;</button>
 
     <h2 class="text-2xl font-bold text-indigo-700 mb-4 text-center">Conference Registration</h2>
@@ -524,39 +622,45 @@ ONLINE - March 29th, 2026(Sunday)
       Fill in your details to register for the conference.
     </p>
 
- <form action="https://formsubmit.co/el/lojaga" method="POST" class="space-y-4">
+ <form action="https://formsubmit.co/el/lojaga" method="POST" enctype="multipart/form-data" class="space-y-4">
   <!-- Disable captcha & redirect after submission -->
   <input type="hidden" name="_captcha" value="false">
   <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou.html">
 
   <input type="text" name="name" placeholder="Full Name" required
     class="w-full border border-gray-400 rounded-lg px-4 py-2">
+
   <input type="email" name="email" placeholder="Email" required
     class="w-full border border-gray-400 rounded-lg px-4 py-2">
+
+  <input type="email" name="alternate_email" placeholder="Alternate Email" required
+    class="w-full border border-gray-400 rounded-lg px-4 py-2">
+
+  <input type="tel" name="mobile_number" placeholder="Mobile Number" required
+    class="w-full border border-gray-400 rounded-lg px-4 py-2">
+
   <input type="text" name="institution" placeholder="Institution / Organization" required
     class="w-full border border-gray-400 rounded-lg px-4 py-2">
+
   <input type="text" name="country" placeholder="Country" required
     class="w-full border border-gray-400 rounded-lg px-4 py-2">
 
-      <select name="category" required
-        class="w-full border border-gray-400 text-gray-800 rounded-lg px-4 py-2 bg-white focus:border-indigo-500 focus:ring-indigo-500">
-        <option value="">-- Select Category --</option>
-        <option>UG / PG Student</option>
-        <option>Research Scholar</option>
-        <option>Faculty / Professor</option>
-        <option>Industry Participant</option>
-        <option>Visitor</option>
-      </select>
+  <select name="category" required
+    class="w-full border border-gray-400 text-gray-800 rounded-lg px-4 py-2 bg-white focus:border-indigo-500 focus:ring-indigo-500">
+    <option value="">-- Select Category --</option>
+    <option>UG / PG Student</option>
+    <option>Research Scholar</option>
+    <option>Faculty / Professor</option>
+    <option>Industry Participant</option>
+    <option>Visitor</option>
+  </select>
 
-      <select name="presentation" required
-        class="w-full border border-gray-400 text-gray-800 rounded-lg px-4 py-2 bg-white focus:border-indigo-500 focus:ring-indigo-500">
-        <option value="">-- Select Presentation Type --</option>
-        <option>Virtual Presentation (Single)</option>
-        <option>Virtual Presentation (Batch)</option>
-        <option>Offline Presentation (Single)</option>
-        <option>Offline Presentation (Batch)</option>
-      </select>
-      
+  <label class="text-label">Upload File</label>
+<input type="file" name="attachment" id="fileInput" accept="application/pdf">
+
+
+   
+
   <div class="text-center">
     <button type="submit"
       class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-2 rounded-lg shadow-md transition">
@@ -565,10 +669,32 @@ ONLINE - March 29th, 2026(Sunday)
   </div>
 </form>
 
+
+
+
+       
+
+      <!-- <select name="presentation" required
+        class="w-full border border-gray-400 text-gray-800 rounded-lg px-4 py-2 bg-white focus:border-indigo-500 focus:ring-indigo-500">
+        <option value="">-- Select Presentation Type --</option>
+        <option>Virtual Presentation (Single)</option>
+        <option>Virtual Presentation (Batch)</option>
+        <option>Offline Presentation (Single)</option>
+        <option>Offline Presentation (Batch)</option>
+      </select> -->
+      
+  <!-- <div class="text-center">
+    <button type="submit"
+      class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-2 rounded-lg shadow-md transition">
+      Submit Registration
+    </button>
+  </div>
+</form> -->
+
   </div>
 </div>
     </section>
-
+<!-- 
   <section id="faq" class="pt-20 pb-12 px-6 md:px-16 bg-gray-50">
 
    
@@ -579,6 +705,104 @@ ONLINE - March 29th, 2026(Sunday)
 
       <div class="space-y-4">
         <!-- Question 1 -->
+        <!-- <div class="border-b pb-2">
+          <button class="w-full text-left font-semibold text-gray-800 flex justify-between items-center focus:outline-none faq-question">
+            <span>1. Will all papers be published in International Journal?</span>
+            <span class="text-indigo-500 transition-transform duration-300 faq-icon">+</span>
+          </button>
+          <p class="hidden mt-2 text-gray-700 faq-answer">
+            Yes, all registered papers will be published in international journals like 
+            <span class="font-semibold">Scopus indexed, ANNA University Annexure 1, SCIE Journal, Web of Science</span>.
+            Authors can choose the journal of their wish, with an additional fee charged.
+          </p>
+        </div> -->
+
+        <!-- Question 2 -->
+        <!-- <div class="border-b pb-2">
+          <button class="w-full text-left font-semibold text-gray-800 flex justify-between items-center focus:outline-none faq-question">
+            <span>2. In case we cannot make our presence (absent) in the conference?</span>
+            <span class="text-indigo-500 transition-transform duration-300 faq-icon">+</span>
+          </button>
+          <p class="hidden mt-2 text-gray-700 faq-answer">
+            Yes, absence is acceptable. Participants can mention the same in the registration form.
+            In such cases, the conference certificate and proceedings will be sent to the respective participants by post.
+          </p>
+        </div> -->
+
+        <!-- Question 3 -->
+        <!-- <div class="border-b pb-2">
+          <button class="w-full text-left font-semibold text-gray-800 flex justify-between items-center focus:outline-none faq-question">
+            <span>3. Who are eligible for Video Presentation?</span>
+            <span class="text-indigo-500 transition-transform duration-300 faq-icon">+</span>
+          </button>
+          <p class="hidden mt-2 text-gray-700 faq-answer">
+            Authors abroad are eligible, and authors in India having special permission
+            (refer registration form sent during paper acceptance) from the
+            <span class="font-semibold">ICRETM 2026 team</span>.
+          </p>
+        </div> -->
+
+        <!-- Question 4 -->
+        <!-- <div class="border-b pb-2">
+          <button class="w-full text-left font-semibold text-gray-800 flex justify-between items-center focus:outline-none faq-question">
+            <span>4. Who is a Registered Author?</span>
+            <span class="text-indigo-500 transition-transform duration-300 faq-icon">+</span>
+          </button>
+          <p class="hidden mt-2 text-gray-700 faq-answer">
+            The author who submits the registration form and pays the registration fee.
+          </p>
+        </div> -->
+
+        <!-- Question 5 -->
+        <!-- <div class="border-b pb-2">
+          <button class="w-full text-left font-semibold text-gray-800 flex justify-between items-center focus:outline-none faq-question">
+            <span>5. What will be the presentation timing?</span>
+            <span class="text-indigo-500 transition-transform duration-300 faq-icon">+</span>
+          </button>
+          <p class="hidden mt-2 text-gray-700 faq-answer">
+            Each presentation will have a total of <span class="font-semibold">12 minutes</span> for the presentation
+            and <span class="font-semibold">3 minutes</span> for the question-and-answer session.
+          </p>
+        </div> -->
+
+        <!-- Question 6 -->
+        <!-- <div class="border-b pb-2">
+          <button class="w-full text-left font-semibold text-gray-800 flex justify-between items-center focus:outline-none faq-question">
+            <span>6. What should the participants bring?</span>
+            <span class="text-indigo-500 transition-transform duration-300 faq-icon">+</span>
+          </button>
+          <p class="hidden mt-2 text-gray-700 faq-answer">
+            Participants should bring a copy of their college ID card and presentation
+            in a <span class="font-semibold">pen drive (preferably)</span> or CD.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!-- <section id="faq" class=""></section> -->
+<!-- <section id="contact" class="pt-20 pb-12 px-6 md:px-16 bg-white-50">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold text-indigo-700 mb-4">Contacts</h2>
+    <p class="text-gray-700 mb-8 text-lg">Here's where you can reach us:</p>
+
+    <div class="space-y-4 text-lg">
+      <p class="text-gray-800 font-medium">
+        📞 Mobile No: <span class="text-indigo-600">09344037078</span>
+      </p>
+      <p class="text-gray-800 font-medium">
+        📧 Email: <a href="mailto:cfretm@gmail.com" class="text-indigo-600 hover:underline">cfretm@gmail.com</a>
+      </p>
+    </div>
+  </div>
+</section>  -->
+<section id="info" class="pt-20 mt-10 pb-12 px-6 md:px-16 bg-gray-50">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 bg-white shadow-lg rounded-xl p-8">
+    
+    <!-- FAQ Section -->
+    <div>
+      <h2 class="text-2xl font-bold text-indigo-700 mb-6 border-b-2 border-indigo-200 pb-2">FAQ</h2>
+      <div class="space-y-4">
+        <!-- Repeat your FAQ items here -->
         <div class="border-b pb-2">
           <button class="w-full text-left font-semibold text-gray-800 flex justify-between items-center focus:outline-none faq-question">
             <span>1. Will all papers be published in International Journal?</span>
@@ -590,9 +814,7 @@ ONLINE - March 29th, 2026(Sunday)
             Authors can choose the journal of their wish, with an additional fee charged.
           </p>
         </div>
-
-        <!-- Question 2 -->
-        <div class="border-b pb-2">
+          <div class="border-b pb-2">
           <button class="w-full text-left font-semibold text-gray-800 flex justify-between items-center focus:outline-none faq-question">
             <span>2. In case we cannot make our presence (absent) in the conference?</span>
             <span class="text-indigo-500 transition-transform duration-300 faq-icon">+</span>
@@ -650,9 +872,26 @@ ONLINE - March 29th, 2026(Sunday)
             in a <span class="font-semibold">pen drive (preferably)</span> or CD.
           </p>
         </div>
+        <!-- Add other questions similarly -->
       </div>
     </div>
-  </section>
+
+    <!-- Contact Section -->
+   <div class="text-right md:text-right">
+      <h2 class="text-2xl font-bold text-indigo-700 mb-6 border-b-2 border-indigo-200 pb-2">Contacts</h2>
+      <p class="text-gray-700 mb-8 text-lg">Here's where you can reach us:</p>
+      <div class="space-y-4 text-lg">
+        <p class="text-gray-800 font-medium">
+          📞 Mobile No: <span class="text-indigo-600">09344037078</span>
+        </p>
+        <p class="text-gray-800 font-medium">
+          📧 Email: <a href="mailto:cfretm@gmail.com" class="text-indigo-600 hover:underline">cfretm@gmail.com</a>
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 
   </main>
@@ -671,56 +910,11 @@ ONLINE - March 29th, 2026(Sunday)
       </div>
     </div>
   </footer>
-<script>
-  const authorsBtn = document.getElementById('authorsBtn');
-  const authorsMenu = document.getElementById('authorsMenu');
-  const arrowIcon = document.getElementById('arrowIcon');
+  <!-- Back to Top Button -->
+<button id="backToTop" class="fixed bottom-6 right-6 bg-indigo-600 text-white p-3 rounded-full shadow-lg hover:bg-indigo-700 transition-opacity opacity-0 pointer-events-none z-50">
+  ↑
+</button>
 
-  authorsBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    authorsMenu.classList.toggle('hidden');
-    arrowIcon.classList.toggle('rotate-180');
-  });
-
-  // close dropdown when clicking outside
-  document.addEventListener('click', (e) => {
-    if (!authorsMenu.contains(e.target) && !authorsBtn.contains(e.target)) {
-      authorsMenu.classList.add('hidden');
-      arrowIcon.classList.remove('rotate-180');
-    }
-  });
-  const modal = document.getElementById('registrationModal');
-  const openBtn = document.getElementById('openModal');
-  const closeBtn = document.getElementById('closeModal');
-
-  openBtn.addEventListener('click', () => modal.classList.remove('hidden'));
-  closeBtn.addEventListener('click', () => modal.classList.add('hidden'));
-  window.addEventListener('click', (e) => {
-    if (e.target === modal) modal.classList.add('hidden');
-  });
-//FAQ Accordion
-       // FAQ accordion toggle
-    const faqQuestions = document.querySelectorAll('.faq-question');
-
-    faqQuestions.forEach((question) => {
-      question.addEventListener('click', () => {
-        const answer = question.nextElementSibling;
-        const icon = question.querySelector('.faq-icon');
-
-        // Hide all other answers
-        document.querySelectorAll('.faq-answer').forEach((ans) => {
-          if (ans !== answer) ans.classList.add('hidden');
-        });
-        document.querySelectorAll('.faq-icon').forEach((icn) => {
-          if (icn !== icon) icn.textContent = '+';
-        });
-
-        // Toggle the selected one
-        answer.classList.toggle('hidden');
-        icon.textContent = answer.classList.contains('hidden') ? '+' : '−';
-      });
-  
-    });
-</script>
+<script src="js/script.js"></script>
 </body>
 </html>
