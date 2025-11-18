@@ -21,6 +21,16 @@
       <h1 class="text-3xl font-semibold whitespace-nowrap">ICCET 2026</h1>
     </div>
 
+    <!-- Mobile Menu Button -->
+<button id="mobileMenuBtn" class="md:hidden text-gray-700">
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none"
+    viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+      d="M4 6h16M4 12h16M4 18h16" />
+  </svg>
+</button>
+
+
     <!-- RIGHT: NAVIGATION -->
     <nav class="hidden md:flex gap-6 items-center text-sm relative">
 
@@ -33,13 +43,15 @@
           </svg>
         </button>
         <div id="aboutMenu" class="absolute left-0 mt-2 w-56 bg-white border border-gray-200 rounded-lg shadow-xl hidden z-50">
-          <a href="#college" class="block px-4 py-2 hover:bg-indigo-50">College</a>
-          <a href="#about" class="block px-4 py-2 hover:bg-indigo-50">Conference</a>
+          <a href="#about" class="block px-4 py-2 hover:bg-indigo-50">ICCET 2026</a>
+          <a href="#college" class="block px-4 py-2 hover:bg-indigo-50">Vidya Vikas</a>
+          
         </div>
       </div>
-
-      <a href="#committee" class="hover:text-indigo-600 whitespace-nowrap">Program Committee</a>
+      
       <a href="#speakers" class="hover:text-indigo-600 whitespace-nowrap">Speakers</a>
+      <a href="#committee" class="hover:text-indigo-600 whitespace-nowrap">Program Committee</a>
+ 
 
       <!-- Call for Papers -->
       <a href="#call-for-papers" class="hover:text-indigo-600 whitespace-nowrap">Call for Papers</a>
@@ -68,6 +80,22 @@
     </nav>
 
   </div>
+  <!-- Mobile Dropdown Menu -->
+<div id="mobileMenu"
+  class="md:hidden bg-white shadow-lg border-t border-gray-200 hidden">
+
+  <a href="#about" class="block px-4 py-3 hover:bg-gray-100 text-center">About</a>
+  <a href="#speakers" class="block px-4 py-3 hover:bg-gray-100 text-center">Speakers</a>
+  <a href="#committee" class="block px-4 py-3 hover:bg-gray-100 text-center">Program Committee</a>
+  <a href="#call-for-papers" class="block px-4 py-3 hover:bg-gray-100 text-center">Call for Papers</a>
+  <a href="#paper-submission" class="block px-4 py-3 hover:bg-gray-100 text-center">Paper Submission</a>
+  <a href="#" class="block px-4 py-3 hover:bg-gray-100 text-center">Accepted Paper List</a>
+  <a href="#journal-publication" class="block px-4 py-3 hover:bg-gray-100 text-center">Journal Publication</a>
+  <a href="#info" class="block px-4 py-3 hover:bg-gray-100 text-center">FAQ</a>
+  <a href="#info" class="block px-4 py-3 hover:bg-gray-100 text-center">Contact Us</a>
+
+</div>
+
 </header>
 
 
@@ -137,25 +165,22 @@
   <!-- Main Content -->
   <main class="max-w-7xl mx-auto px-6 py-12">
 
-    <!-- About Section -->
-<section id="college" class="bg-white py-12 px-6 md:px-20">
-  <div class="max-w-6xl mx-auto space-y-4">
-    <h3 class="text-2xl font-bold text-gray-900">About Vidya Vikas</h3>
-    <p class="text-gray-600">
-      <span class="text-blue-700 font-semibold">VIDYAA VIKAS COLLEGE OF ENGINEERING AND TECHNOLOGY</span> is established in the year 1973. The college is located at Tiruchengode,Namakkal District,India.
-    </p>
-    <p class="text-gray-600">
-      We aim to increase the application orientation of students and encourage independent study and working. These efforts help students understand concepts deeply and develop essential skills. Our mission is to support academic growth and meet the industrial demand for qualified, skillful engineers and technicians.
-    </p>
-    <a href="https://vvcet.ac.in/" class="text-blue-600 hover:text-blue-800 font-medium underline">Read more...</a>
-  </div>
-</section>
-
-<section id="about" class="bg-white py-12 px-6 md:px-20 mt-16">
+    <section id="about" class="bg-white py-12 px-6 md:px-20 ">
   <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-start">
     <div class="space-y-4">
       <h3 class="text-2xl font-bold text-gray-900">About the Conference</h3>
-      <p class="text-gray-600">The International Conference on Cognitive Informatics Engineering and Technology brings together educators, policymakers, innovators, and students to discuss strategies and innovations for inclusive, high-quality education worldwide.</p>
+      <p class="text-gray-600 text-justify">International conference on Cognitive Informatics Engineering and 
+        Technology (ICCET) will be held on 28th and 29th March 2026 at Vidyaa Vikas College of 
+        Engineering and Technology,Tiruchengode, India. ICCET will bring together innovative academics 
+        and industrial experts in the field of Science, Engineering, Technology and Management to a 
+        common forum. This International conference presents a unique 
+        opportunity for Research Scholars, Students, Academicians to 
+        actively engage with leading technology experts.
+         Attendees can anticipate engaging discussions, presentations, and
+          demonstrations of cutting-edge technologies, fostering collaboration and 
+          knowledge-sharing. Hosted by VVCET, a renowned Institute dedicated to educational
+           research, the conference promises to be a valuable platform for fostering
+            innovation and addressing contemporary challenges in Engineering and Technology.</p>
       <ul class="space-y-2 text-gray-600">
         <li>• Keynotes by world-class education leaders</li>
         <li>• Hands-on workshops and demo booths</li>
@@ -174,6 +199,22 @@
     </div>
   </div>
 </section>
+
+    <!-- About Section -->
+<section id="college" class="bg-white py-12 px-6 md:px-20 mt-16">
+  <div class="max-w-6xl mx-auto space-y-4">
+    <h3 class="text-2xl font-bold text-gray-900">About Vidya Vikas</h3>
+    <p class="text-gray-600">
+      <span class="text-blue-700 font-semibold">VIDYAA VIKAS COLLEGE OF ENGINEERING AND TECHNOLOGY</span> is established in the year 1973. The college is located at Tiruchengode,Namakkal District,India.
+    </p>
+    <p class="text-gray-600">
+      We aim to increase the application orientation of students and encourage independent study and working. These efforts help students understand concepts deeply and develop essential skills. Our mission is to support academic growth and meet the industrial demand for qualified, skillful engineers and technicians.
+    </p>
+    <a href="https://vvcet.ac.in/" class="text-blue-600 hover:text-blue-800 font-medium underline">Read more...</a>
+  </div>
+</section>
+
+
 
 
     <!-- Speakers Section -->
@@ -424,6 +465,41 @@
  <section id="paper-submission" class="py-16 bg-gray-50">
   <div class="max-w-6xl mx-auto px-6">
     <h2 class="text-3xl font-bold text-center text-indigo-700 mb-10">Paper Submission & Registration</h2>
+    
+<!-- Submission Methods -->
+    <div class="bg-white p-6 rounded-xl shadow mb-8">
+      <h3 class="text-xl font-semibold text-indigo-700 mb-3">Submission Methods</h3>
+      <ol class="list-decimal list-inside space-y-2 text-gray-700">
+        <li>
+          
+         <button class="openModal " style="background:#4f46e5; color:white; padding:6px 12px; 
+          border-radius:6px; font-size:14px; text-decoration:none;">
+  Click here to submit the papers
+</button>
+ or <a href="mailto:icretm@gmail.com"
+   style="background:#4f46e5; color:white; padding:6px 12px; 
+          border-radius:6px; font-size:14px; text-decoration:none;">
+  icretm@gmail.com
+</a>
+        </li>
+        <li>
+          Proceedings of <strong>ICRETM 2026</strong> will be published with ISBN number.
+          All selected papers will be published in 
+          <span class="font-semibold text-yellow-600">Google Scholar, SCIE, Scopus, Web of Science, Anna University Annexure 1</span> 
+          with additional fee.
+        </li>
+        <!-- <li>
+          Full text papers (.pdf and .doc) should be submitted via 
+          <span class="font-semibold text-blue-700">Email: icretm@gmail.com</span>.
+        </li> -->
+      </ol>
+
+      <p class="mt-4 text-gray-700 text-sm">
+        <strong>*Note:</strong> The conference secretary will contact you within 3 working days of submission 
+        with your paper ID and feedback. If you don’t receive feedback, please follow up after 3 days.
+      </p>
+    </div>
+
 
     <!-- Template -->
     <div class="bg-white p-6 rounded-xl shadow mb-8">
@@ -439,28 +515,7 @@
       </p>
     </div>
 
-    <!-- Submission Methods -->
-    <div class="bg-white p-6 rounded-xl shadow mb-8">
-      <h3 class="text-xl font-semibold text-indigo-700 mb-3">Submission Methods</h3>
-      <ol class="list-decimal list-inside space-y-2 text-gray-700">
-        <li>
-          Proceedings of <strong>ICRETM 2026</strong> will be published with ISBN number.
-          All selected papers will be published in 
-          <span class="font-semibold text-yellow-600">Google Scholar, SCIE, Scopus, Web of Science, Anna University Annexure 1</span> 
-          with additional fee.
-        </li>
-        <li>
-          Full text papers (.pdf and .doc) should be submitted via 
-          <span class="font-semibold text-blue-700">Email: icretm@gmail.com</span>.
-        </li>
-      </ol>
-
-      <p class="mt-4 text-gray-700 text-sm">
-        <strong>*Note:</strong> The conference secretary will contact you within 3 working days of submission 
-        with your paper ID and feedback. If you don’t receive feedback, please follow up after 3 days.
-      </p>
-    </div>
-
+    
  
 
     <!-- Registration Table -->
@@ -501,9 +556,9 @@
             <td class="border px-4 py-2 text-center font-medium">2950</td>
           </tr>
           <tr class="bg-gray-50">
-            <td class="border px-4 py-2 text-center">Offline</td>
-            <td class="border px-4 py-2 text-center font-medium">Rs. 1000</td>
-            <td class="border px-4 py-2 text-center font-medium">3350</td>
+            <td class="border px-4 py-2 text-center">Others/Visitor</td>
+            <td class="border px-4 py-2 text-center font-medium">1</td>
+            <td class="border px-4 py-2 text-center font-medium">1000</td>
           </tr>
         </tbody>
       </table>
@@ -550,6 +605,11 @@
  
 
   <div class="space-y-4">
+    <p class="text-gray-700 text-justify">Publication Opportunity:
+All registered papers will be published in an international conference proceeding (Having ISBN Number)
+Journal Publication Opportunity: All registered and extended versions of the papers will be published in related reputed International Journals.
+Get your paper published in Scopus, Web of Science, SCI, and Annexure 1 & 2 Indexed Journals and Book Chapters with nominal extra charges.
+This conference is Scopus Indexed Journals Associated Conference.</p>
     <p class="text-gray-700">
       <a href="files/journal_list_2026.pdf" download
          class="text-blue-600 hover:text-blue-800 font-medium">
@@ -574,6 +634,7 @@
   </h3>
 
   <div class="space-y-4">
+    
     <p class="text-gray-700">
       <a href="files/journal_2025.pdf" download
          class="text-blue-600 hover:text-blue-800 font-medium">
@@ -607,9 +668,13 @@
     <p class="mt-2 text-white/90">Reserve your seat</p>
   </div>
 
-  <button id="openModal" class="px-6 py-3 bg-yellow-400 text-indigo-900 rounded-lg font-semibold">
+  <!-- <button id="openModal" class="px-6 py-3 bg-yellow-400 text-indigo-900 rounded-lg font-semibold">
     Register
-  </button>
+  </button> -->
+  <button class="openModal px-6 py-3 bg-yellow-400 text-indigo-900 rounded-lg font-semibold">
+  Register
+</button>
+
 </section>
 <!-- Modal (hidden by default) -->
 <div id="registrationModal" class="fixed inset-0 bg-black bg-opacity-40 hidden flex items-center justify-center z-50">
@@ -622,7 +687,7 @@
       Fill in your details to register for the conference.
     </p>
 
- <form action="https://formsubmit.co/el/lojaga" method="POST" enctype="multipart/form-data" class="space-y-4">
+ <form action="submit.php" method="POST" enctype="multipart/form-data" class="space-y-4">
   <!-- Disable captcha & redirect after submission -->
   <input type="hidden" name="_captcha" value="false">
   <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou.html">
@@ -882,10 +947,10 @@
       <p class="text-gray-700 mb-8 text-lg">Here's where you can reach us:</p>
       <div class="space-y-4 text-lg">
         <p class="text-gray-800 font-medium">
-          📞 Mobile No: <span class="text-indigo-600">09344037078</span>
+          📞 Mobile No: <span class="text-indigo-700">09344037078</span>
         </p>
         <p class="text-gray-800 font-medium">
-          📧 Email: <a href="mailto:cfretm@gmail.com" class="text-indigo-600 hover:underline">cfretm@gmail.com</a>
+          📧 Email: <a href="mailto:cfretm@gmail.com" class="text-indigo-700 hover:underline">cfretm@gmail.com</a>
         </p>
       </div>
     </div>
@@ -905,8 +970,11 @@
         <p class="text-sm text-gray-500 mt-2">Contact: info@ieconf.org | +44 20 7946 0000</p>
       </div>
       <div class="mt-6 md:mt-0 text-sm text-gray-600">
-        <div>© 2026 IEConf. All rights reserved.</div>
-        <div class="mt-2">Follow us: Twitter · LinkedIn · Facebook</div>
+        <div>©   <a href="https://devspectra.in" 
+         class="text-blue-600 hover:text-blue-800 font-medium">
+        DevSpectra
+      </a> All rights reserved.</div>
+        <!-- <div class="mt-2">Follow us: Twitter · LinkedIn · Facebook</div> -->
       </div>
     </div>
   </footer>
@@ -915,6 +983,8 @@
   ↑
 </button>
 
-<script src="js/script.js"></script>
+<script src="js/script.js">
+  
+</script>
 </body>
 </html>
