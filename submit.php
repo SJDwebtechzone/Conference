@@ -36,9 +36,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['attachment'])) {
         $mail->Port = 587;
 
         // Email Content
-        $mail->setFrom('iccetconf2026@gmail.com', 'Conference Form');
+        $mail->setFrom('iccetconf2026@gmail.com', 'ICCET 2026');
 
-        $mail->addAddress('iccetconf@gmail.com'); // Recipient
+        $mail->addAddress('priyajass33@gmail.com'); // Recipient
 
         // Attach uploaded file
         $mail->addAttachment($_FILES['attachment']['tmp_name'], $_FILES['attachment']['name']);
